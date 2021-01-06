@@ -1,3 +1,24 @@
+# Fork of Puppeteer-Core for Apple Silicon
+
+Installation:
+
+1. `brew install chromium`
+2. `yarn add https://github.com/seanaye/puppeteer/releases/download/v5.5.0-apple-silicon/puppeteer-core-5.5.0-post.tgz`
+
+Usage:
+
+```ts
+import puppeteer from 'puppeteer-core'
+
+async function main () {
+  const browser = await puppeteer.launch({
+    executablePath: '/Applications/Chromium.app/Contents/MacOS/Chromium',
+    headless: false,
+    slowMo: 1000
+  })
+  ...
+```
+
 # Puppeteer
 
 <!-- [START badges] -->
