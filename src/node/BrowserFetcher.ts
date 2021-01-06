@@ -111,7 +111,7 @@ function downloadURL(
 function handleArm64(): void {
   fs.stat('/usr/bin/chromium-browser', function (err, stats) {
     if (stats === undefined) {
-      fs.stat('/usr/bin/chromium', function (err, stats) {
+      fs.stat('/Applications/Chromium.app/Contents/MacOS/Chromium', function (err, stats) {
         if (stats === undefined) {
           console.error(`The chromium binary is not available for arm64.`);
           console.error(`If you are on Ubuntu, you can install with: `);
